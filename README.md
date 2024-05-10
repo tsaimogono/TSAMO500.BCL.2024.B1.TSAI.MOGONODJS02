@@ -94,15 +94,6 @@ This project challenges you to think critically about user input, error handling
  - Displays the division result in a result element.
  - Includes console logging for debugging purposes.
  
- ## Instructions
- - Save the code in a JavaScript file.
- - Include the JavaScript file in your HTML document.
- - Ensure your form has the data attribute `data-form` and the result element has the attribute `data-result`.
- 
- ## API Reference
- ### Event Listener
- `form.addEventListener("submit", (event) => {...}` - Adds an event listener to the form for the submit event.
- 
  ### Object Destructuring
  `const { dividend, divider } = Object.fromEntries(entries);` - Converts form data to an object and destructures dividend and divider variables.
  
@@ -114,14 +105,20 @@ This project challenges you to think critically about user input, error handling
  - `if ( isNaN(dividend) || isNaN(divider) ) {...}` - Checks if dividend or divider is not a number and handles the error.
  - `if ( dividend === "" || divider === "") {...}` - Checks if both inputs are empty and handles the error.
  
- ## Example
- ### HTML Form:
- ```html
- <form data-form>
-   <label for="dividend">Dividend:</label>
-   <input type="number" name="dividend" id="dividend">
-   <label for="divider">Divider:</label>
-   <input type="number" name="divider" id="divider">
-   <button type="submit">Calculate</button>
- </form>
- <div data-result></div>
+### Challenges
+- Extend the script to handle decimal numbers and display the result with a specific precision.
+- Add more operations (addition, subtraction, multiplication) and create a menu to select the operation.
+- Store previous calculations in memory and provide an option to view the history.
+= Add a clear button to reset the form and remove the result from the result element.
+- Improve error handling to display error messages next to the relevant input fields.
+
+### Project Process
+- Identify requirements and objectives.
+- Design the form layout and elements.
+- Develop the JavaScript functions to perform calculations and handle errors.
+- Integrate JavaScript functions with the form elements and event listeners.
+- Test the form with various inputs and debug any issues.
+ Feedback
+- The script is simple and straightforward, providing a good starting point for form-based calculations.
+- Adding more comments and documentation could make it easier for other developers to understand and maintain the code.
+- Implementing more robust error handling and user-friendly error messages would improve the user experience.
