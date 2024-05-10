@@ -83,3 +83,45 @@ The provided HTML and JavaScript setup a basic form for inputting two numbers (d
 
 This project challenges you to think critically about user input, error handling, and providing a seamless user experience. Ensure your solution is robust, user-friendly, and meets the specified requirements.
 
+ # Readme
+ 
+ This is a VS Code style JavaScript code for a form that calculates the division of two input numbers.
+
+ ## Features
+ - Accepts user input for dividend and divider.
+ - Validates inputs to ensure they are numbers.
+ - Avoids division by zero and handles errors.
+ - Displays the division result in a result element.
+ - Includes console logging for debugging purposes.
+ 
+ ## Instructions
+ - Save the code in a JavaScript file.
+ - Include the JavaScript file in your HTML document.
+ - Ensure your form has the data attribute `data-form` and the result element has the attribute `data-result`.
+ 
+ ## API Reference
+ ### Event Listener
+ `form.addEventListener("submit", (event) => {...}` - Adds an event listener to the form for the submit event.
+ 
+ ### Object Destructuring
+ `const { dividend, divider } = Object.fromEntries(entries);` - Converts form data to an object and destructures dividend and divider variables.
+ 
+ ### Division Calculation
+ `let divideResult = dividend / divider;` - Calculates the division of dividend by divider.
+ 
+ ### Error Handling
+ - `if ( divider === "0" ) {...}` - Checks if divider is zero and handles the error.
+ - `if ( isNaN(dividend) || isNaN(divider) ) {...}` - Checks if dividend or divider is not a number and handles the error.
+ - `if ( dividend === "" || divider === "") {...}` - Checks if both inputs are empty and handles the error.
+ 
+ ## Example
+ ### HTML Form:
+ ```html
+ <form data-form>
+   <label for="dividend">Dividend:</label>
+   <input type="number" name="dividend" id="dividend">
+   <label for="divider">Divider:</label>
+   <input type="number" name="divider" id="divider">
+   <button type="submit">Calculate</button>
+ </form>
+ <div data-result></div>
