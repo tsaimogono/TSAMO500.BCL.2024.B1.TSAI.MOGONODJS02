@@ -29,7 +29,10 @@ form.addEventListener("submit", (event) => {
     console.error("Invalid input values", new Error("Input values should be numbers.") );
     result.classList.add("critical-error");
     result.innerText = "Something critical went wrong. Please reload the page.";
+    
     return;
   };
   
+  
+  result.innerText = divideResult;
 });
