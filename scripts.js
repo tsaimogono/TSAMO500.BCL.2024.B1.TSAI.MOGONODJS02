@@ -14,5 +14,9 @@ form.addEventListener("submit", (event) => {
   
   let divideResult = dividend / divider;
 
+  if ( divideResult % 1 !== 0) {
+    divideResult = Math.floor(divideResult);
+  };
+
   
 });
