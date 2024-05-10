@@ -24,6 +24,7 @@ form.addEventListener("submit", (event) => {
     return;
   };
 
+
   if ( isNaN(dividend) || isNaN(divider) ) {
     console.error("Invalid input values", new Error("Input values should be numbers.") );
     result.classList.add("critical-error");
